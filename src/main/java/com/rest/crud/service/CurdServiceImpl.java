@@ -44,4 +44,15 @@ public class CurdServiceImpl implements CrudService {
 		
 	}
 
+	@Override
+	public void updateData(int id, String name) {
+		
+		Employee employee = mr.findById(id).get();
+		
+		employee.setName(name);
+		
+		mr.save(employee);
+		
+	}
+
 }
