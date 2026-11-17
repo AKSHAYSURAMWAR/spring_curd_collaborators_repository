@@ -1,5 +1,7 @@
 package com.rest.crud.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.rest.crud.Model.Employee;
@@ -14,6 +16,12 @@ public class CurdServiceImpl implements CrudService {
 		this.mr=mr;
 	}
 	
+	@Override
+	public List<Employee> getAllData() {
+		List<Employee> list= mr.findAll();
+		
+		return list;
+
 	@Override
 	public Employee getsingledata(Integer id) {
 		Employee e=mr.findById(id).get();
@@ -30,7 +38,7 @@ public class CurdServiceImpl implements CrudService {
 	public void saveEmpData(Employee emp) {
 		
 		repository.save(emp);
-		
+
 	}
 
 }
