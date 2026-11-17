@@ -14,11 +14,7 @@ public class Employee {
 	private String name;
 	private Double salary;
 	
-	public Employee( String name, Double salary) {
-		super();
-		this.name = name;
-		this.salary = salary;
-	}
+
 	public int getId() {
 		return id;
 	}
