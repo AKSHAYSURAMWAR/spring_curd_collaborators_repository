@@ -25,6 +25,7 @@ public class MyController {
 	public List<Employee> getAllemp(){
 		List<Employee> emp = cs.getAllData();
 		return emp;
+	}
 
 	@GetMapping("/getemp/{id}")
 	public Employee getsingleemp(@PathVariable int id) {
