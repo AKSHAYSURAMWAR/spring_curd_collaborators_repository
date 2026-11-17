@@ -16,12 +16,29 @@ public class CurdServiceImpl implements CrudService {
 		this.mr=mr;
 	}
 	
-	
 	@Override
 	public List<Employee> getAllData() {
 		List<Employee> list= mr.findAll();
 		
 		return list;
+
+	@Override
+	public Employee getsingledata(Integer id) {
+		Employee e=mr.findById(id).get();
+		return e;
+	}
+
+	private MyRepository repository;
+
+	public CurdServiceImpl(MyRepository repository) {
+		this.repository = repository;
+	}
+	
+	@Override
+	public void saveEmpData(Employee emp) {
+		
+		repository.save(emp);
+
 	}
 
 }
