@@ -20,4 +20,17 @@ public class CurdServiceImpl implements CrudService {
 		return e;
 	}
 
+	private MyRepository repository;
+
+	public CurdServiceImpl(MyRepository repository) {
+		this.repository = repository;
+	}
+	
+	@Override
+	public void saveEmpData(Employee emp) {
+		
+		repository.save(emp);
+		
+	}
+
 }
