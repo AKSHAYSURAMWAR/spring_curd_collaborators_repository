@@ -14,4 +14,6 @@ public interface CrudService {
 	public Employee getsingledata(Integer id);
 	
 	public void deleteDataById(int id);
+	
+	public void updateData(int id,String name);
 }
